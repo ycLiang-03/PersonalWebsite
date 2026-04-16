@@ -113,7 +113,7 @@ const scrollToContact = () => {
 
       <!-- Right side: Profile Image -->
       <div class="relative flex justify-center md:justify-end items-center fade-in-up delay-300">
-        <div class="relative w-64 h-64 md:w-[420px] md:h-[420px] group transition-transform duration-700 hover:scale-105">
+        <div class="relative w-56 h-56 md:w-[360px] md:h-[360px] group transition-transform duration-700 hover:scale-105">
           <!-- White base layer to improve color blending -->
           <div class="absolute -inset-4 rounded-full bg-white/30 blur-xl"></div>
           <!-- Rotating gradient glow behind image -->
