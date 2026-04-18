@@ -2,7 +2,7 @@
 import { ref, onMounted, onUnmounted } from 'vue'
 import Nav from './components/Nav.vue'
 import Hero from './components/Hero.vue'
-import OceanBackground from './components/OceanBackground.vue'
+import OceanBackground from './components/OceanBackground/index.vue'
 
 const sections = ref(['Home', 'About', 'Contact'])
 const activeSection = ref('Home')
@@ -57,9 +57,9 @@ onUnmounted(() => {
         <Hero />
       </section>
       
-      <!-- About Section -->
-      <section id="about" class="min-h-screen flex items-center justify-center bg-transparent border-t border-white/5">
-        <div class="max-w-4xl px-8 text-center scroll-reveal fade-up">
+      <!-- About Section - Extended to 2 window heights -->
+      <section id="about" class="min-h-[200vh] flex flex-col items-center justify-start bg-transparent border-t border-white/5 pt-32">
+        <div class="max-w-4xl px-8 text-center scroll-reveal fade-up mb-32">
           <h2 class="text-4xl md:text-5xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-500">About My Journey</h2>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
             <div class="p-6 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 hover-jitter transition-all hover:bg-white/10">
@@ -73,6 +73,46 @@ onUnmounted(() => {
               <p class="text-gray-300 leading-relaxed">
                 Passionate about crafting seamless web experiences using modern frameworks and building robust backend architectures.
               </p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Additional content to extend the section -->
+        <div class="max-w-4xl px-8 text-center scroll-reveal fade-up mb-32">
+          <h2 class="text-3xl md:text-4xl font-bold mb-8 text-white">My Philosophy</h2>
+          <div class="p-8 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10">
+            <p class="text-gray-300 leading-relaxed text-lg">
+              I believe in the power of technology to transform lives. Every line of code, every product decision, should ultimately serve to make the world a better place. Through AI and modern web technologies, we can create solutions that were once thought impossible.
+            </p>
+          </div>
+        </div>
+        
+        <div class="max-w-4xl px-8 text-center scroll-reveal fade-up">
+          <h2 class="text-3xl md:text-4xl font-bold mb-8 text-white">Skills & Technologies</h2>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="p-4 rounded-xl bg-white/5 backdrop-blur-md border border-white/10">
+              <p class="text-white font-medium">Vue.js</p>
+            </div>
+            <div class="p-4 rounded-xl bg-white/5 backdrop-blur-md border border-white/10">
+              <p class="text-white font-medium">React</p>
+            </div>
+            <div class="p-4 rounded-xl bg-white/5 backdrop-blur-md border border-white/10">
+              <p class="text-white font-medium">Node.js</p>
+            </div>
+            <div class="p-4 rounded-xl bg-white/5 backdrop-blur-md border border-white/10">
+              <p class="text-white font-medium">Python</p>
+            </div>
+            <div class="p-4 rounded-xl bg-white/5 backdrop-blur-md border border-white/10">
+              <p class="text-white font-medium">Three.js</p>
+            </div>
+            <div class="p-4 rounded-xl bg-white/5 backdrop-blur-md border border-white/10">
+              <p class="text-white font-medium">Machine Learning</p>
+            </div>
+            <div class="p-4 rounded-xl bg-white/5 backdrop-blur-md border border-white/10">
+              <p class="text-white font-medium">TypeScript</p>
+            </div>
+            <div class="p-4 rounded-xl bg-white/5 backdrop-blur-md border border-white/10">
+              <p class="text-white font-medium">AWS</p>
             </div>
           </div>
         </div>
